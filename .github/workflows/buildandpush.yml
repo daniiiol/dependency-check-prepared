@@ -1,4 +1,4 @@
-name: Toolbox Javascript
+name: Build and Push
 
 on:
   push:
