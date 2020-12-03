@@ -1,4 +1,4 @@
-name: Build and Push
+name: Build and Push (Maven)
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./dockerfiles/cli/dockerfile
+        file: ./dockerfiles/maven/dockerfile
         push: true
         tags: |
           daniiiol/dependency-check-maven-prepared:latest
