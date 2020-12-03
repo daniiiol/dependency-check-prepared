@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main ]
     paths: 
-      - dockerfile
+      - dockerfiles/cli/dockerfile
   pull_request:
     branches: [ main ]
     paths: 
-      - dockerfile
+      - dockerfiles/cli/dockerfile
   schedule:
     - cron: '0 0 * * *'  # every day at midnight 
 
@@ -33,7 +33,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./dockerfile
+        file: ./dockerfiles/cli/dockerfile
         push: true
         tags: |
           daniiiol/dependency-check-prepared:latest
