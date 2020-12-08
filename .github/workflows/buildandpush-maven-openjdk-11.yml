@@ -1,4 +1,4 @@
-name: Build and Push (Maven)
+name: Build and Push (Maven / OpenJDK 11)
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./dockerfiles/maven/dockerfile
+        file: ./dockerfiles/maven-openjdk-11/dockerfile
         push: true
         tags: |
           daniiiol/dependency-check-maven-prepared:openjdk-11
