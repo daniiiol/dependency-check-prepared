@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main ]
     paths: 
-      - dockerfiles/maven/dockerfile
+      - dockerfiles/maven-openjdk-15/dockerfile
   pull_request:
     branches: [ main ]
     paths: 
-      - dockerfiles/maven/dockerfile
+      - dockerfiles/maven-openjdk-15/dockerfile
   schedule:
     - cron: '0 0 * * *'  # every day at midnight 
 
@@ -33,7 +33,8 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./dockerfiles/maven/dockerfile
+        file: ./dockerfiles/maven-openjdk-15/dockerfile
         push: true
         tags: |
           daniiiol/dependency-check-maven-prepared:latest
+          daniiiol/dependency-check-maven-prepared:openjdk-15
