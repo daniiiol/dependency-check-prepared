@@ -1,4 +1,4 @@
-name: Build and Push (Maven)
+name: Build and Push (Maven / OpenJDK 15)
 
 on:
   push:
