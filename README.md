@@ -3,4 +3,4 @@ This repository creates (each day at midnight) an updated Docker image `dependen
 - [DependencyCheck CLI Tool](https://hub.docker.com/r/daniiiol/dependency-check-prepared)
 - [DependencyCheck Maven Tool](https://hub.docker.com/r/daniiiol/dependency-check-maven-prepared)
 
-Feel free to support this project with any hints, contributions or kudos :)
+Feel free to support this project with some hints, contributions or kudos :)
