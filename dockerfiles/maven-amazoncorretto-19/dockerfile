@@ -1,0 +1,9 @@
+FROM maven:3.8.6-amazoncorretto-19
+
+COPY ./warmup/pom.xml /warmup/pom.xml
+
+RUN mvn -f /warmup/pom.xml -Dmaven.main.skip org.owasp:dependency-check-maven:check
+RUN rm -R /warmup/
+
+ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
+CMD ["mvn"]
