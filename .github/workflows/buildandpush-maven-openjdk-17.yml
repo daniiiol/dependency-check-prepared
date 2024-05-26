@@ -36,5 +36,4 @@ jobs:
         file: ./dockerfiles/maven-openjdk-17/dockerfile
         push: true
         tags: |
-          daniiiol/dependency-check-maven-prepared:latest
           daniiiol/dependency-check-maven-prepared:openjdk-17
